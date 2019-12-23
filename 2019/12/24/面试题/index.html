@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Funnywx">
+
+
+
+
+
+<title>面试题 | Funnywx&#39;s blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Funnywx&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Funnywx&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">面试题</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Funnywx</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 24, 2019&nbsp;&nbsp;1:34:01</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E9%9D%A2%E8%AF%95/">-面试</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="java面试题总结"><a href="#java面试题总结" class="headerlink" title="java面试题总结"></a>java面试题总结</h1><p>[TOC]</p>
+<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="1-访问修饰符public-private-protected-以及不写（默认）时的区别"><a href="#1-访问修饰符public-private-protected-以及不写（默认）时的区别" class="headerlink" title="1.访问修饰符public,private,protected,以及不写（默认）时的区别?"></a>1.访问修饰符public,private,protected,以及不写（默认）时的区别?</h3><table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>当前类</th>
+<th>包</th>
+<th>子类</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>✔︎</td>
+<td>✔︎</td>
+<td>✔︎</td>
+<td>✔︎</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>✔︎</td>
+<td>✔︎</td>
+<td>✔︎</td>
+<td>✘</td>
+</tr>
+<tr>
+<td>default</td>
+<td>✔︎</td>
+<td>✔︎</td>
+<td>✘</td>
+<td>✘</td>
+</tr>
+<tr>
+<td>private</td>
+<td>✔︎</td>
+<td>✘</td>
+<td>✘</td>
+<td>✘</td>
+</tr>
+</tbody></table>
+<h3 id="2-amp-和-amp-amp-的区别"><a href="#2-amp-和-amp-amp-的区别" class="headerlink" title="2.&amp;和&amp;&amp;的区别?"></a>2.&amp;和&amp;&amp;的区别?</h3><table>
+<thead>
+<tr>
+<th>&amp;</th>
+<th>&amp;&amp;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>按位与，逻辑与</td>
+<td>短路与</td>
+</tr>
+</tbody></table>
+<h3 id="3-swtich-是否能作用在byte-上，是否能作用在long-上，是否能作用在String上"><a href="#3-swtich-是否能作用在byte-上，是否能作用在long-上，是否能作用在String上" class="headerlink" title="3.swtich 是否能作用在byte 上，是否能作用在long 上，是否能作用在String上?"></a>3.swtich 是否能作用在byte 上，是否能作用在long 上，是否能作用在String上?</h3><p>早期的JDK中，switch（expr）中，expr可以是byte、short、char、int。从1.5版开始，Java中引入了枚举类型（enum），expr也可以是枚举，从JDK 1.7版开始，还可以是字符串（String）。长整型（long）是不可以的。</p>
+<h3 id="4-String-和StringBuilder、StringBuffer-的区别"><a href="#4-String-和StringBuilder、StringBuffer-的区别" class="headerlink" title="4.String 和StringBuilder、StringBuffer 的区别?"></a>4.String 和StringBuilder、StringBuffer 的区别?</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String</td>
+<td>String底层实现是final数组，是只读的。</td>
+</tr>
+<tr>
+<td>StringBuilder</td>
+<td>JDK1.5引入，适用在单线程下。</td>
+</tr>
+<tr>
+<td>StringBuffer</td>
+<td>功能与StringBuilder类似，线程安全。</td>
+</tr>
+</tbody></table>
+<p><img src="https://images2018.cnblogs.com/blog/1460390/201809/1460390-20180907214321248-590008059.jpg" alt="img"></p>
+<h3 id="5-java的集合结构"><a href="#5-java的集合结构" class="headerlink" title="5.java的集合结构"></a>5.java的集合结构</h3><p><img src="/Users/xiao/work/%E9%9D%A2%E8%AF%95/collections.gif" alt="collections"></p>
+<table>
+<thead>
+<tr>
+<th>接口</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Collection</td>
+<td>顶层集合接口</td>
+</tr>
+<tr>
+<td>Collection-&gt;List</td>
+<td>链表</td>
+</tr>
+<tr>
+<td>Collection-&gt;Set</td>
+<td>集合，去重</td>
+</tr>
+<tr>
+<td>Collection-&gt;Queue</td>
+<td>队列</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>键值对</td>
+</tr>
+</tbody></table>
+<h3 id="6-Java异常结构"><a href="#6-Java异常结构" class="headerlink" title="6.Java异常结构"></a>6.Java异常结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">Obejct&lt;|--Throwable</span><br><span class="line">Throwable&lt;|--Error</span><br><span class="line">Error&lt;|--AWTError</span><br><span class="line">Error&lt;|--VirtulMachineError</span><br><span class="line">VirtulMachineError&lt;|--OutOfMemoryError</span><br><span class="line">VirtulMachineError&lt;|--StackOverFlowError</span><br><span class="line">Throwable&lt;|--Exception</span><br><span class="line">Exception&lt;|--CheckedException</span><br><span class="line">Exception&lt;|--RuntimeException</span><br><span class="line">CheckedException&lt;|--IOException</span><br><span class="line">CheckedException&lt;|--ClassNotFoundException</span><br><span class="line">CheckedException&lt;|--SQLException</span><br><span class="line">CheckedException&lt;|--FileNotFoundException</span><br><span class="line">RuntimeException&lt;|--NullPointerException</span><br><span class="line">RuntimeException&lt;|--ClassCastException</span><br><span class="line">RuntimeException&lt;|--IndexOutOfBoundsException</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-final、finally、finalize的区别"><a href="#7-final、finally、finalize的区别" class="headerlink" title="7.final、finally、finalize的区别?"></a>7.final、finally、finalize的区别?</h3><p>final可以声明变量、类、方法。声明变量时，只读，声明时给定初始值。声明类时，不可被继承。声明方法时，同样只能使用，不能在子类中被重写。</p>
+<p>finally通常放到try…catch的后面构造总是执行的代码块，不管其中是否发生异常，只要JVM不关闭都会执行，一般用来回收资源。</p>
+<p>finalize方法是Object类的方法，在GC一个对象时执行的方法。这个方法是由垃圾收集器在销毁对象时调用的，通过重写finalize() 方法可以整理系统资源或者执行其他清理工作。</p>
+<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2>
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Funnywx</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://funnywx.github.io/2019/12/24/%E9%9D%A2%E8%AF%95%E9%A2%98/">https://funnywx.github.io/2019/12/24/%E9%9D%A2%E8%AF%95%E9%A2%98/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/java/"># -java</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2019/12/24/hello-world/">Hello World</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Funnywx | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
